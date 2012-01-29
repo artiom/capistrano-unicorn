@@ -67,7 +67,7 @@ module CapistranoUnicorn
           end
         end
 
-        after "deploy:restart", "unicorn:reload"
+        after "deploy:restart", "unicorn:stop", "unicorn:start"
       end
     end
   end
